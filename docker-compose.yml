@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  db:
+    command:
+      - mongod
+    container_name: mongoose-relay-paginate-example-mongo-service
+    image: mongo:latest
+    ports:
+      - 27017:27017/tcp
+    stdin_open: true
+    tty: true
+    volumes:
+      - mongoose-relay-paginate-example:/data
+
+volumes:
+  mongoose-relay-paginate-example:
